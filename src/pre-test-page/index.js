@@ -44,7 +44,26 @@ newDiv.innerHTML =
 
                 <p>Эта статистика поможет вам определить сложность теста на основе результатов других пользователей расширения</p>
 
-                <table id="cheater-table-stats"><tbody><tr><th>Параметр</th><th>Значение</th></tr><tr><td>Всего</td><td> </td></tr><tr><td>Прошли тест</td><td> </td></tr><tr><td>Не прошли тест</td><td> </td></tr></tbody></table>
+                <table id="cheater-table-stats" style="text-align: center">
+                    <tbody>
+                        <tr>
+                            <th>Параметр</th>
+                            <th>Значение</th>
+                        </tr>
+                        <tr>
+                            <td>Всего</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Прошли тест</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Не прошли тест</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
             <div class="header-actions-container flex-shrink-0" data-region="header-actions-container"></div>

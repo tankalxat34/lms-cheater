@@ -8,6 +8,7 @@ License: MIT
 
 Добавление новых функтов меню
 
+<button type="submit" class="btn btn-primary" id="single_button62c348cc3adc314" title="">Продолжить последнюю попытку</button>
 */
 
 let menu = document.getElementById("action-menu-1-menu")

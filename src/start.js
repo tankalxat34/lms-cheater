@@ -24,9 +24,9 @@ alertDiv.innerHTML =
         <div class="info" style="text-align: justify">
             <p>Данное расширение позволит вам успешнее проходить онлайн-тесты, которые есть в СДО РАНХиГС. Оно подсвечивает вероятные ответы на каждый вопрос теста, если на конкретный вопрос уже были даны ответы другими пользователями расширения.</p>
             <ul>
-                <li><a href="https://vk.com/tankalxat34">ВКонтакте</a></li>
-                <li><a href="https://t.me/tankalxat34">Telegram</a></li>
-                <li><a href="https://github.com/tankalxat34/lms-cheater">GitHub</a></li>
+                <li><a href="https://vk.com/tankalxat34" target="_blank">ВКонтакте</a></li>
+                <li><a href="https://t.me/tankalxat34" target="_blank">Telegram</a></li>
+                <li><a href="https://github.com/tankalxat34/lms-cheater" target="_blank">GitHub</a></li>
             </ul>
             <p>Перед запуском прокторинга убедитесь, что расширение отключено!</p>
         </div>

@@ -22,7 +22,6 @@
 
     "background": {
 	    "scripts": [ 
-	    	"src/start.js",
             "src/menu.js"
 	    ]
 	},
@@ -32,6 +31,13 @@
     		"matches": [
     			"*://lms.ranepa.ru/*"
     		],
+    		"js": [ "src/menu.js" ],
+    		"run_at" : "document_end"
+    	},
+        {
+    		"matches": [
+    			"*://lms.ranepa.ru/my/*"
+    		],
     		"js": [ "src/start.js", "src/menu.js" ],
     		"run_at" : "document_end"
     	},
@@ -39,9 +45,16 @@
     		"matches": [
     			"*://lms.ranepa.ru/mod/quiz/view.php?id=*"
     		],
-    		"js": [ "src/pre-test-page/index.js" ],
+    		"js": [ "src/pre-test-page/index.js", "src/menu.js" ],
     		"run_at" : "document_end"
-    	}      
+    	},
+        {
+    		"matches": [
+    			"*://lms.ranepa.ru/mod/quiz/attempt.php?attempt=*"
+    		],
+    		"js": [ "src/menu.js" ],
+    		"run_at" : "document_end"
+    	} 
     ],
 
     "permissions": [
