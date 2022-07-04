@@ -1,7 +1,7 @@
 {
     "incognito": "spanning",
 
-    "name": "LMS Cheeter",
+    "name": "LMS Cheater",
     "version": "1.0.0",
     "manifest_version": 2,
     "author": "Alexander Podstrechnyy",
@@ -10,7 +10,7 @@
 
     "browser_action": {
 		"default_icon": "icons/default.png",
-		"default_title": "lms cheeter",
+		"default_title": "lms cheater",
 		"default_popup": "pages/popup/index.html"
 	},
 
@@ -22,7 +22,8 @@
 
     "background": {
 	    "scripts": [ 
-	    	"src/core.js"
+	    	"src/start.js",
+            "src/menu.js"
 	    ]
 	},
 
@@ -31,9 +32,16 @@
     		"matches": [
     			"*://lms.ranepa.ru/*"
     		],
-    		"js": [ "src/core.js" ],
+    		"js": [ "src/start.js", "src/menu.js" ],
     		"run_at" : "document_end"
-    	}        
+    	},
+        {
+    		"matches": [
+    			"*://lms.ranepa.ru/mod/quiz/view.php?id=*"
+    		],
+    		"js": [ "src/pre-test-page/index.js" ],
+    		"run_at" : "document_end"
+    	}      
     ],
 
     "permissions": [

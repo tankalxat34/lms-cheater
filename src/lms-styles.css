@@ -7,3 +7,6 @@
 #cheeter-alert li {
     list-style-type: none;
 }
+#cheeter-alert span {
+    color: green;
+}
