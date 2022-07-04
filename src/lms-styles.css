@@ -1,4 +1,9 @@
 .success-cheeter-alert {
     color: #00FF3F;
     text-align: center;
+    padding: .5%;
+}
+
+#cheeter-alert li {
+    list-style-type: none;
 }
