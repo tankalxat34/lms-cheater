@@ -14,7 +14,7 @@ function addCssToDom(url) {
     document.head.appendChild(style);
 }
 
-addCssToDom("lms-styles.css")
+addCssToDom("https://raw.githubusercontent.com/tankalxat34/lms-cheeter/main/src/lms-styles.css")
 
 let successAlertSection = document.getElementById("block-region-side-pre")
 let alertDiv = document.createElement("section")
