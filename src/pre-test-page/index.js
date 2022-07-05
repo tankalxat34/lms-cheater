@@ -14,21 +14,6 @@ License: MIT
 let page = document.getElementById("page-header")
 
 let newDiv = document.createElement("div")
-// newDiv.innerHTML = 
-// `
-// <div class="row pb-3 d-print-block">
-//     <div class="col-12">
-//         <section aria-label="Содержимое">
-
-//             <span class="notifications" ></span>
-//             <div role="main">
-//                 <span></span>
-//                 <h2>Итоговый тест по курсу</h2>
-//             </div>
-//         </selection>
-//     </div>
-// </div>
-// `
 newDiv.innerHTML = 
 `
 <div class="card" id="cheater-stat-block">

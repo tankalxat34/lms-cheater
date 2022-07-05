@@ -10,3 +10,12 @@ ul.cheater-alert li {
 #cheeter-alert span {
     color: green;
 }
+
+div.cheater-test {
+    padding: .3%;
+    margin: 10px;
+}
+
+table.cheater-test {
+    padding: 3px;
+}
