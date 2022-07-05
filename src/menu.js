@@ -21,6 +21,10 @@ extentionLink.innerHTML =
     <i class="icon fa fa-tachometer fa-fw " aria-hidden="true"></i>
     <span class="menu-action-text">LMS Cheater</span>
 </a>
+<a href="https://tankalxat34.github.io" class="dropdown-item menu-action" role="menuitem" tabindex="-1" target="_blank">
+    <i class="icon fa fa-home fa-fw " aria-hidden="true"></i>
+    <span class="menu-action-text">Сайт разработчика</span>
+</a>
 `
 
 menu.append(extentionLink)

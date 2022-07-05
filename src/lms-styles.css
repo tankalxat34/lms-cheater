@@ -4,7 +4,7 @@
     padding: .5%;
 }
 
-#cheeter-alert li {
+ul.cheater-alert li {
     list-style-type: none;
 }
 #cheeter-alert span {
