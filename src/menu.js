@@ -24,6 +24,10 @@ extentionLink.innerHTML =
     <i class="icon fa fa-home fa-fw " aria-hidden="true"></i>
     <span class="menu-action-text">Сайт разработчика</span>
 </a>
+<a href="https://vk.com/tankalxat34" class="dropdown-item menu-action" role="menuitem" tabindex="-1" target="_blank">
+    <i class="icon fa fa-search fa-fw " aria-hidden="true"></i>
+    <span class="menu-action-text">Преложить функционал</span>
+</a>
 `
 
 menu.append(extentionLink)

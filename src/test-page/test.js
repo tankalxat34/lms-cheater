@@ -58,6 +58,21 @@ for (let question of questionsIdArray) {
     clearedIdArray.push(question.id)
 }
 
+// добавляем блок с описанием
+let pageContent = document.getElementById("page-content")
+let descriptionBlock = document.createElement("div")
+descriptionBlock.classList = "card"
+descriptionBlock.style.marginBottom = "1%"
+descriptionBlock.innerHTML =
+`
+<div style="padding: 15px;">
+    <h3>Выбор ответа</h3>
+    <p>Вы видите, что некоторые варианты ответов подсвечены и справа от каждого из них указаны проценты. Процент обозначает долю студентов, которые выбрали этот вопрос в качестве правильного ответа на их взгляд. Благодаря получению такой статистики можно, опираясь на чужое мнение, предположить, что тот или иной ответ верен.</p>
+    <p>Если вы не уверены в том или ином ответе - вы можете воспользоваться кнопками-ссылками для быстрого поиска в интернете с помощью нескольких популярных поисковых систем.</p>
+</div>
+`
+pageContent.before(descriptionBlock)
+
 
 // пробежка по вариантам ответа к каждому вопросу
 // добавление блоков к каждому вопросу
@@ -113,7 +128,7 @@ for (let element of allAnswersArray) {
     } else if (percent * 100 >= 50) {
         element.parentElement.style.color = `rgba(220, 220, 220, .99)`;
     } else {
-        element.parentElement.style.color = `black`;
+        element.parentElement.style.color = `#000`;
     }
 
     // добавление процентов людей, которые ответили на этот вопрос
