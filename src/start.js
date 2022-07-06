@@ -48,13 +48,8 @@ alertDiv.innerHTML =
         <div class="info" style="text-align: justify">
             <p>Данное расширение позволит вам успешнее проходить онлайн-тесты, которые есть в СДО РАНХиГС. Оно подсвечивает вероятные ответы на каждый вопрос теста, если на конкретный вопрос уже были даны ответы другими пользователями расширения.</p>
             <p>У расширения есть и дополнительный функционал: быстрый поиск в интернете, статистика других пользователей по тестам и вопросам в них, и многое другое.</p>
-            
             <p>Перед запуском прокторинга убедитесь, что расширение отключено!</p>
-            <div id="button-update-extension">
-                
-            </div>
-            <!-- <button type="submit" class="btn btn-primary" title="" onclick="{getData('https://api.github.com/repos/tankalxat34/lms-cheater/releases', checkNewReleases)}">Проверить обновления</button> -->
-            <!-- <a href="#" onclick="{getData('https://api.github.com/repos/tankalxat34/lms-cheater/releases', checkNewReleases)}">Проверить обновления</a> -->
+            <div id="button-update-extension"></div>
         </div>
         <span>Версия: </span><span style="color: grey;">${MANIFEST.version}</span><br>
         <span>Автор: </span><span style="color: grey;">${MANIFEST.author}</span><br>
