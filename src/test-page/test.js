@@ -48,17 +48,19 @@ let iterator = 0;
 
 let hrefSearchArray = []
 
+// заполнем массив с текстами вопросов
 for (let q of questionsArray) {
     hrefSearchArray.push(q.childNodes[2].innerText)
 }
 
-
+// заполняем массив с id вопросов
 for (let question of questionsIdArray) {
     clearedIdArray.push(question.id)
 }
 
 
 // пробежка по вариантам ответа к каждому вопросу
+// добавление блоков к каждому вопросу
 for (let answer of answersBlocksArray) {
     let divStat = document.createElement("div")
     divStat.className = "cheater-test"
@@ -68,11 +70,11 @@ for (let answer of answersBlocksArray) {
 <div>
     <h4>Быстрый поиск в интернете</h4>
     <div style="display: inline-block; padding: 5px 10px;">
-        <a target="_blank" href="${INTERNET_PATTERNS.yandex.url + hrefSearchArray[iterator].replaceAll(" ", INTERNET_PATTERNS.yandex.replacedSpace)}">${INTERNET_PATTERNS.yandex.name}</a>
-        <a target="_blank" href="${INTERNET_PATTERNS.google.url + hrefSearchArray[iterator].replaceAll(" ", INTERNET_PATTERNS.google.replacedSpace)}">${INTERNET_PATTERNS.google.name}</a>
-        <a target="_blank" href="${INTERNET_PATTERNS.mailru.url + hrefSearchArray[iterator].replaceAll(" ", INTERNET_PATTERNS.mailru.replacedSpace)}">${INTERNET_PATTERNS.mailru.name}</a>
-        <a target="_blank" href="${INTERNET_PATTERNS.brave.url + hrefSearchArray[iterator].replaceAll(" ", INTERNET_PATTERNS.brave.replacedSpace)}">${INTERNET_PATTERNS.brave.name}</a>
-        <a target="_blank" href="${INTERNET_PATTERNS.bing.url + hrefSearchArray[iterator].replaceAll(" ", INTERNET_PATTERNS.bing.replacedSpace)}">${INTERNET_PATTERNS.bing.name}</a>
+        <a target="_blank" href="${INTERNET_PATTERNS.yandex.url +   hrefSearchArray[iterator].replaceAll(" ", INTERNET_PATTERNS.yandex.replacedSpace)}">${INTERNET_PATTERNS.yandex.name}</a>
+        <a target="_blank" href="${INTERNET_PATTERNS.google.url +   hrefSearchArray[iterator].replaceAll(" ", INTERNET_PATTERNS.google.replacedSpace)}">${INTERNET_PATTERNS.google.name}</a>
+        <a target="_blank" href="${INTERNET_PATTERNS.mailru.url +   hrefSearchArray[iterator].replaceAll(" ", INTERNET_PATTERNS.mailru.replacedSpace)}">${INTERNET_PATTERNS.mailru.name}</a>
+        <a target="_blank" href="${INTERNET_PATTERNS.brave.url +    hrefSearchArray[iterator].replaceAll(" ", INTERNET_PATTERNS.brave.replacedSpace)}">${INTERNET_PATTERNS.brave.name}</a>
+        <a target="_blank" href="${INTERNET_PATTERNS.bing.url +     hrefSearchArray[iterator].replaceAll(" ", INTERNET_PATTERNS.bing.replacedSpace)}">${INTERNET_PATTERNS.bing.name}</a>
     </div>
 </div>
 
@@ -91,6 +93,34 @@ for (let answer of answersBlocksArray) {
     answer.append(divStat)
     iterator++
 }
+
+
+iterator = 0
+
+// пробежка по вариантам ответов
+// получение данных
+let allAnswersArray = document.getElementsByClassName("flex-fill ml-1")
+// let allAnswersArray = document.getElementsByClassName("answer")
+for (let element of allAnswersArray) {
+    let percent = Math.random()
+    console.log(element.parentElement.id)
+
+    // добавление стилей к правильному ответу
+    element.parentElement.classList.add("right-answer");
+    element.parentElement.style.backgroundColor = `rgba(0, 100, 0, ${percent})`;
+    if (percent * 100 >= 80) {
+        element.parentElement.style.color = `rgba(255, 255, 255, .99)`;
+    } else if (percent * 100 >= 50) {
+        element.parentElement.style.color = `rgba(220, 220, 220, .99)`;
+    } else {
+        element.parentElement.style.color = `black`;
+    }
+
+    // добавление процентов людей, которые ответили на этот вопрос
+    element.innerHTML += `<span><b> (${String(percent * 100).split(".")[0]}%)</b></span>`
+    iterator++
+}
+
 
 
 

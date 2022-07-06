@@ -10,6 +10,8 @@ License: MIT
 
 */
 
+const VERSION = "beta0.0.1"
+
 let successAlertSection = document.getElementById("block-region-side-pre")
 let alertDiv = document.createElement("section")
 alertDiv.className = " block_online_users block  card mb-3"
@@ -28,11 +30,11 @@ alertDiv.innerHTML =
                 <li><a href="https://vk.com/tankalxat34" target="_blank">ВКонтакте</a></li>
                 <li><a href="https://t.me/tankalxat34" target="_blank">Telegram</a></li>
                 <li><a href="https://tankalxat34.github.io/" target="_blank">Сайт разработчика</a></li>
-                <li><a href="https://www.donationalerts.com/r/tankalxat34" target="_blank">Поддержать💸</a></li>
             </ul>
             <p>Перед запуском прокторинга убедитесь, что расширение отключено!</p>
             <button type="submit" class="btn btn-primary" title="" onclick="window.open('https://github.com/tankalxat34/lms-cheater/releases')">Проверить обновления</button>
         </div>
+        <span>Версия: </span><span style="color: grey;">${VERSION}</span><br>
         <div class="footer"></div>
     </div>
 </div>

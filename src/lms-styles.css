@@ -19,3 +19,15 @@ div.cheater-test {
 table.cheater-test {
     padding: 3px;
 }
+
+.right-answer {
+    padding: 3px 5px;
+    background-color: rgba(0, 100, 0, .99);
+    border-radius: 10px;
+    color: rgba(255, 255, 255, .99);
+    /* font-weight: 700; */
+}
+
+.right-answer.percent {
+    font-weight: 700;
+}
